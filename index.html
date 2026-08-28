@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Commander Tech Rentals — two demo rental portals for Harare, Zimbabwe. Choose a website below.">
+<title>Commander Tech Rentals · Choose a website</title>
+<style>
+:root{
+  --g900:#123f26;--g800:#17552f;--g700:#1b6b3a;--g100:#dff2e5;--g50:#f2faf5;
+  --em:#053b2c;--em2:#0a5c42;--mint:#a9e0c2;--cream:#f7f6f0;
+  --ink:#152a1e;--mut:#547060;--line:#dfece4;--ring:#0e6b32;
+  --shadow:0 1px 2px rgba(18,63,38,.06),0 12px 34px rgba(18,63,38,.1);
+}
+*,*::before,*::after{box-sizing:border-box}
+body{margin:0;font-family:'Open Sans','Roboto',system-ui,-apple-system,'Segoe UI',Arial,sans-serif;
+  color:var(--ink);background:linear-gradient(170deg,#eefbf2 0%,#dcf3e4 45%,#f4faf6 100%);
+  line-height:1.6;padding-bottom:70px;min-height:100vh}
+.wrap{max-width:1000px;margin:0 auto;padding:0 22px}
+a{color:var(--g800)}
+:focus-visible{outline:3px solid var(--ring);outline-offset:2px;border-radius:6px}
+.skip{position:absolute;left:-999px}
+.skip:focus{left:16px;top:16px;background:var(--g900);color:#fff;padding:10px 16px;border-radius:10px;z-index:10}
+header{text-align:center;padding:46px 20px 8px}
+.logo-row{display:flex;align-items:center;justify-content:center;gap:13px}
+.logo-t{font-weight:800;font-size:1.5rem;letter-spacing:-.01em}
+.logo-t b{display:block;font-size:.75rem;font-weight:700;color:var(--g700);letter-spacing:.16em;text-transform:uppercase}
+.kicker{font-size:.8rem;font-weight:800;letter-spacing:.16em;text-transform:uppercase;color:var(--g700);margin:26px 0 8px}
+h1{font-size:clamp(1.7rem,4.5vw,2.5rem);margin:0 0 10px;letter-spacing:-.02em}
+.lede{color:#33503f;max-width:58ch;margin:0 auto 30px;font-size:1.06rem}
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:26px;margin:34px 0}
+.site-card{background:#fff;border:1px solid var(--line);border-radius:20px;overflow:hidden;
+  box-shadow:var(--shadow);display:flex;flex-direction:column;text-decoration:none;color:var(--ink);
+  transition:transform .18s,box-shadow .18s}
+.site-card:hover{transform:translateY(-5px);box-shadow:0 2px 8px rgba(18,63,38,.1),0 24px 55px rgba(18,63,38,.18)}
+.swatch{height:118px;display:flex;align-items:center;justify-content:center;gap:10px}
+.swatch span{width:34px;height:34px;border-radius:50%;border:3px solid rgba(255,255,255,.85)}
+.sw-1{background:linear-gradient(120deg,#dcf3e4,#bfe8cd)}
+.sw-2{background:linear-gradient(120deg,#053b2c,#0a5c42)}
+.site-body{padding:22px 24px 24px;display:flex;flex-direction:column;gap:8px;flex:1}
+.site-body h2{margin:0;font-size:1.22rem}
+.site-body p{margin:0;color:var(--mut);font-size:.94rem}
+.feat{list-style:none;margin:6px 0 4px;padding:0;display:flex;flex-direction:column;gap:5px;font-size:.9rem;color:#33503f}
+.feat li{display:flex;gap:8px;align-items:center}
+.dot{width:7px;height:7px;border-radius:50%;background:var(--g700);flex:none}
+.open{margin-top:auto;padding-top:16px;font-weight:800;color:var(--g800);font-size:.98rem}
+.badge{display:inline-block;padding:3px 11px;border-radius:999px;font-size:.72rem;font-weight:800;
+  letter-spacing:.06em;text-transform:uppercase;width:max-content}
+.b1{background:var(--g100);color:#14532d}
+.b2{background:var(--mint);color:#04301f}
+.panel{background:#fff;border:1px solid var(--line);border-radius:18px;box-shadow:var(--shadow);padding:26px;margin:0 0 26px}
+.panel h2{margin:0 0 14px;font-size:1.15rem}
+table{border-collapse:collapse;width:100%;font-size:.94rem}
+th{text-align:left;font-size:.72rem;letter-spacing:.09em;text-transform:uppercase;color:var(--mut);padding:9px 12px;border-bottom:2px solid var(--line)}
+td{padding:11px 12px;border-bottom:1px solid var(--line)}
+tr:last-child td{border-bottom:none}
+code{background:var(--g50);border:1px solid var(--line);border-radius:7px;padding:2px 8px;font-size:.85rem}
+.contact{display:flex;gap:10px;flex-wrap:wrap;list-style:none;margin:0;padding:0}
+.contact li{background:var(--g50);border:1px solid var(--line);border-radius:999px;padding:8px 17px;font-size:.92rem;font-weight:600}
+footer{text-align:center;color:var(--mut);font-size:.88rem;padding:10px 20px 30px}
+.dev-badge{position:fixed;right:14px;bottom:14px;display:flex;align-items:center;gap:8px;background:#fff;
+  border:1px solid var(--line);border-radius:999px;padding:5px 14px 5px 6px;box-shadow:var(--shadow);
+  font-size:.78rem;font-weight:700;color:var(--g900)}
+@media (prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important}}
+</style>
+</head>
+<body>
+<a class="skip" href="#main">Skip to main content</a>
+
+<header>
+  <div class="logo-row">
+    <svg width="52" height="52" viewBox="0 0 44 44" aria-hidden="true" focusable="false"><rect width="44" height="44" rx="12" fill="#1b6b3a"/><path d="M22 11 11 20.2V33h8.4v-7.6h5.2V33H33V20.2Z" fill="#fff"/><path d="M22 9.6 8.2 20.9l2 2.5L22 13.6l11.8 9.8 2-2.5Z" fill="#a9e0c2"/></svg>
+    <p class="logo-t" style="margin:0">Commander Tech<b>Rentals · Zimbabwe</b></p>
+  </div>
+  <p class="kicker">Harare · House Rentals · Demo Portals</p>
+  <h1>Two websites. One trusted brand.</h1>
+  <p class="lede">Commander Tech Rentals, built on Zimbabwean foundations — verified homes across Borrowdale, Avondale, Mount Pleasant, Glen Lorne, Ruwa and more. Pick a website to explore.</p>
+</header>
+
+<main id="main" class="wrap">
+  <div class="cards">
+    <a class="site-card" href="website-1-portal.html">
+      <div class="swatch sw-1" aria-hidden="true">
+        <span style="background:#dcf3e4"></span><span style="background:#8fd0a8"></span><span style="background:#1b6b3a"></span>
+      </div>
+      <div class="site-body">
+        <span class="badge b1">Website 1 · Portal</span>
+        <h2>Commander Tech Rentals — Portal</h2>
+        <p>Fresh light-green theme with gradient hero, card grids and top-tab dashboards.</p>
+        <ul class="feat">
+          <li><span class="dot"></span> Landlord, tenant &amp; admin demo logins</li>
+          <li><span class="dot"></span> Listings with suburb / rent / beds filters</li>
+          <li><span class="dot"></span> Applications, payments &amp; analytics</li>
+          <li><span class="dot"></span> Fully keyboard &amp; screen-reader accessible</li>
+        </ul>
+        <span class="open">Open Website 1 →</span>
+      </div>
+    </a>
+    <a class="site-card" href="website-2-signature.html">
+      <div class="swatch sw-2" aria-hidden="true">
+        <span style="background:#a9e0c2"></span><span style="background:#0a5c42"></span><span style="background:#053b2c"></span>
+      </div>
+      <div class="site-body">
+        <span class="badge b2">Website 2 · Signature</span>
+        <h2>Commander Tech Rentals — Signature</h2>
+        <p>Executive emerald theme with split hero, dark sidebar studio and grid/list views.</p>
+        <ul class="feat">
+          <li><span class="dot"></span> Pre-filled login tabs for quick demos</li>
+          <li><span class="dot"></span> Grid / list listing views &amp; suburb chips</li>
+          <li><span class="dot"></span> Lease cards, wishlists &amp; payment history</li>
+          <li><span class="dot"></span> WCAG-minded design on every screen</li>
+        </ul>
+        <span class="open">Open Website 2 →</span>
+      </div>
+    </a>
+  </div>
+
+  <div class="panel">
+    <h2>Demo credentials</h2>
+    <div class="table-scroll" style="overflow-x:auto">
+      <table>
+        <caption class="sr-only" style="position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)">Demo login credentials for each role</caption>
+        <thead><tr><th scope="col">Role</th><th scope="col">Email</th><th scope="col">Password</th></tr></thead>
+        <tbody>
+          <tr><td><b>Landlord</b></td><td><code>landlord_demo@commandertech.com</code></td><td><code>Landlord123</code></td></tr>
+          <tr><td><b>Tenant</b></td><td><code>tenant_demo@commandertech.com</code></td><td><code>Tenant123</code></td></tr>
+          <tr><td><b>Admin</b></td><td><code>admin_demo@commandertech.com</code></td><td><code>Admin123</code></td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <div class="panel">
+    <h2>Contact</h2>
+    <ul class="contact">
+      <li>📞 Call / WhatsApp: 0788 386 485</li>
+      <li>✈️ Telegram: 0788 386 485</li>
+      <li>✉️ aubreyubuntu@gmail.com</li>
+      <li>📍 Harare, Zimbabwe</li>
+    </ul>
+  </div>
+</main>
+
+<footer>
+  <p>© 2026 Commander Tech Rentals · Powered by Commander Tech · Built with accessibility in mind</p>
+</footer>
+
+<div class="dev-badge" role="img" aria-label="Website developed by Commander Tech">
+  <svg width="26" height="26" viewBox="0 0 28 28" aria-hidden="true" focusable="false"><circle cx="14" cy="14" r="14" fill="#123f26"/><path d="M14 7 7.5 12.2V21h4.2v-5h4.6v5h4.2v-8.8Z" fill="#a9e0c2"/><text x="14" y="12.2" text-anchor="middle" font-size="6.5" font-weight="800" fill="#fff" font-family="Arial, sans-serif">CT</text></svg>
+  <span>by Commander Tech</span>
+</div>
+</body>
+</html>
